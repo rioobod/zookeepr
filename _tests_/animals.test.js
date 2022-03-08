@@ -5,10 +5,8 @@ const {
   createNewAnimal,
   validateAnimal,
 } = require("../lib/animals.js");
-const { animals } = require("../data/animals");
-const { jest } = require("@jest/globals");
 
-jest.mock('fs');
+const { animals } = require("../data/animals");
 
 test("creates an animal object", () => {
   const animal = createNewAnimal(
@@ -88,3 +86,9 @@ test("validates personality traits", () => {
   expect(result).toBe(true);
   expect(result2).toBe(false);
 });
+
+//const { animals } = require("../data/animals");
+//const { jest } = require("@jest/globals");
+
+
+//jest.mock('fs');
